@@ -1,5 +1,8 @@
 package com.benrift.progressionmod;
 
+import com.benrift.progressionmod.PlayerData.DataAttachmentRegistry;
+import com.benrift.progressionmod.block.ModBlocks;
+import com.benrift.progressionmod.item.ModItems;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -27,6 +30,9 @@ public class ProgressionMod {
 
         NeoForge.EVENT_BUS.register(this);
 
+        ModBlocks.register(modEventBus);
+        ModItems.register(modEventBus);
+        DataAttachmentRegistry.register(modEventBus);
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
