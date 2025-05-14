@@ -3,7 +3,10 @@ package com.benrift.progressionmod.event;
 import com.benrift.progressionmod.PlayerData.DataAttachmentRegistry;
 import com.benrift.progressionmod.ProgressionMod;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.multiplayer.ServerData;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.player.Player;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -16,13 +19,13 @@ public class ModEvents {
     public static void onPlayerTick(PlayerTickEvent.Post event){
         Minecraft minecraft = Minecraft.getInstance();
         Player player = minecraft.player;
-        if (player != null){
 
+        if (player != null){
             int playerInsanity = player.getData(DataAttachmentRegistry.INSANITY);
             Component HADGE = Component.translatable("NOOOOOOOOOOO");
 
             if(playerInsanity >= 100){
-                player.kill();
+
             }else{
 
                 Component SADGE = Component.translatable(String.valueOf(playerInsanity));

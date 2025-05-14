@@ -3,6 +3,8 @@ package com.benrift.progressionmod;
 import com.benrift.progressionmod.PlayerData.DataAttachmentRegistry;
 import com.benrift.progressionmod.block.ModBlocks;
 import com.benrift.progressionmod.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.ItemLike;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -47,7 +49,9 @@ public class ProgressionMod {
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-
+        if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS){
+            event.accept((ItemLike) ModItems.FRUIT_OF_CONSEQUENCE);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
