@@ -16,7 +16,7 @@ public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ProgressionMod.MOD_ID);
 
     public static final Supplier<Item> FRUIT_OF_CONSEQUENCE = ITEMS.register("fruit_of_consequence", () -> new FruitOfConsequences(new Item.Properties().stacksTo(4).
-            rarity(Rarity.EPIC).food((new FoodProperties.Builder()).nutrition(20).saturationModifier(0.3f).alwaysEdible().build())));
+            rarity(Rarity.EPIC).food((new FoodProperties.Builder()).nutrition(40).saturationModifier(0.3f).alwaysEdible().build())));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
