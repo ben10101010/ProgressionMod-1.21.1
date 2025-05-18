@@ -18,22 +18,20 @@ public class ModEvents {
     @SubscribeEvent
     public static void onPlayerTick(PlayerTickEvent.Post event){
         Minecraft minecraft = Minecraft.getInstance();
-        Player player = minecraft.player;
+        Player player = event.getEntity();
 
-        if (player != null){
-            int playerInsanity = player.getData(DataAttachmentRegistry.INSANITY);
-            Component HADGE = Component.translatable("NOOOOOOOOOOO");
+        int playerInsanity = player.getData(DataAttachmentRegistry.INSANITY);
+        Component HADGE = Component.translatable("NOOOOOOOOOOO");
 
-            if(playerInsanity >= 100){
+        if(playerInsanity >= 100){
+            player.kill();
+        }else{
 
-            }else{
+            Component SADGE = Component.translatable(String.valueOf(playerInsanity));
 
-                Component SADGE = Component.translatable(String.valueOf(playerInsanity));
+            player.displayClientMessage(SADGE, true);
 
-                player.displayClientMessage(SADGE, true);
-
-                player.setData(DataAttachmentRegistry.INSANITY, playerInsanity + 1);
-            }
+           // player.setData(DataAttachmentRegistry.INSANITY, playerInsanity + 1);
         }
     }
 }
