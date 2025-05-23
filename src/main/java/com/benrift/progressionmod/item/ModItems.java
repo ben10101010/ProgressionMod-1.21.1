@@ -3,6 +3,7 @@ package com.benrift.progressionmod.item;
 import com.benrift.progressionmod.ProgressionMod;
 import com.benrift.progressionmod.item.CustomItems.FruitOfConsequences;
 import com.benrift.progressionmod.item.CustomItems.TortureDevice;
+import com.benrift.progressionmod.item.CustomItems.DepthsPortalIgniter;  // <-- Add this import
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
@@ -22,6 +23,11 @@ public class ModItems {
 
     public static final Supplier<Item> TORTURE_DEVICE = ITEMS.register("torture_device",
             () -> new TortureDevice(new Item.Properties()
+                    .stacksTo(1)
+                    .rarity(Rarity.EPIC)));
+
+    public static final Supplier<Item> DEPTHS_PORTAL_IGNITER = ITEMS.register("depths_portal_igniter",  // fixed here
+            () -> new DepthsPortalIgniter(new Item.Properties()
                     .stacksTo(1)
                     .rarity(Rarity.EPIC)));
 
