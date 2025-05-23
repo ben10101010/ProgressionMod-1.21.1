@@ -1,5 +1,7 @@
 {
   "item.progression.torture_device": "Torture Device",
   "item.progression.fruit_of_consequence": "Fruit of Consequence",
-  "item.progression.depths_portal_igniter": "Depths Portal Igniter"
+  "item.progression.depths_portal_igniter": "Depths Portal Igniter",
+  "itemgroup.progression": "Progression Mod",
+  "item.progression.yunshul_wish": "Yun'Shul Wish"
 }

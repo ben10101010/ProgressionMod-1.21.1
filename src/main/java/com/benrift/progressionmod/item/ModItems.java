@@ -31,6 +31,12 @@ public class ModItems {
                     .stacksTo(1)
                     .rarity(Rarity.EPIC)));
 
+    public static final Supplier<Item> YUNSHUL_WISH = ITEMS.register("yunshul_wish",
+            () -> new Item(new Item.Properties()
+                    .stacksTo(1)  // Only one item per stack
+                    .rarity(Rarity.EPIC)  // Purple/Epic rarity color
+            ));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
