@@ -1,6 +1,7 @@
-package com.benrift.progressionmod.item;
+package com.benrift.progressionmod.CreativeTabs;
 
 import com.benrift.progressionmod.ProgressionMod;
+import com.benrift.progressionmod.item.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -20,10 +21,12 @@ public class ModCreativeTabs {
                             output.accept(ModItems.FRUIT_OF_CONSEQUENCE.get());
                             output.accept(ModItems.TORTURE_DEVICE.get());
                             output.accept(ModItems.DEPTHS_PORTAL_IGNITER.get());
+                            output.accept(ModItems.YUNSHUL_WISH.get());
                         })
                         .build()
         );
     }
+
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);

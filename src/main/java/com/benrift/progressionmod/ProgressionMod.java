@@ -2,6 +2,7 @@ package com.benrift.progressionmod;
 
 import com.benrift.progressionmod.PlayerData.DataAttachmentRegistry;
 import com.benrift.progressionmod.block.ModBlocks;
+import com.benrift.progressionmod.CreativeTabs.ModCreativeTabs;
 import com.benrift.progressionmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.ItemLike;
@@ -34,6 +35,7 @@ public class ProgressionMod {
 
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
+        ModCreativeTabs.register(modEventBus);
         DataAttachmentRegistry.register(modEventBus);
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

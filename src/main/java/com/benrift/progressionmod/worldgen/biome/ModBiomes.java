@@ -15,7 +15,7 @@ import net.minecraft.world.level.levelgen.GenerationStep;
 
 public class ModBiomes {
     public static final ResourceKey<Biome> DEPTHS_BIOME = ResourceKey.create(Registries.BIOME,
-            ResourceLocation.fromNamespaceAndPath(ProgressionMod.MOD_ID, "test_biome"));
+            ResourceLocation.fromNamespaceAndPath(ProgressionMod.MOD_ID, "depths_biome"));
 
     public static void boostrap(BootstrapContext<Biome> context) {
         context.register(DEPTHS_BIOME, depthsBiome(context));
