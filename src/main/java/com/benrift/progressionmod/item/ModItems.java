@@ -4,6 +4,7 @@ import com.benrift.progressionmod.ProgressionMod;
 import com.benrift.progressionmod.item.CustomItems.FruitOfConsequences;
 import com.benrift.progressionmod.item.CustomItems.TortureDevice;
 import com.benrift.progressionmod.item.CustomItems.DepthsPortalIgniter;  // <-- Add this import
+import com.benrift.progressionmod.item.CustomItems.YunshulWish;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
@@ -32,7 +33,7 @@ public class ModItems {
                     .rarity(Rarity.EPIC)));
 
     public static final Supplier<Item> YUNSHUL_WISH = ITEMS.register("yunshul_wish",
-            () -> new Item(new Item.Properties()
+            () -> new YunshulWish(new Item.Properties()
                     .stacksTo(1)  // Only one item per stack
                     .rarity(Rarity.EPIC)  // Purple/Epic rarity color
             ));
