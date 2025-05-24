@@ -15,23 +15,31 @@ import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 @EventBusSubscriber(modid = ProgressionMod.MOD_ID)
 public class ModEvents {
 
+    static int tickValue = 0;
+
     @SubscribeEvent
     public static void onPlayerTick(PlayerTickEvent.Post event){
         Minecraft minecraft = Minecraft.getInstance();
         Player player = event.getEntity();
 
+
+
         int playerInsanity = player.getData(DataAttachmentRegistry.INSANITY);
         Component HADGE = Component.translatable("NOOOOOOOOOOO");
+
+        if(tickValue >= 1200){
+            player.setData(DataAttachmentRegistry.INSANITY, playerInsanity + 1);
+            tickValue = 0;
+        }else{
+            tickValue++;
+        }
 
         if(playerInsanity >= 100){
             player.kill();
         }else{
-
             Component SADGE = Component.translatable(String.valueOf(playerInsanity));
 
             player.displayClientMessage(SADGE, true);
-
-           // player.setData(DataAttachmentRegistry.INSANITY, playerInsanity + 1);
         }
     }
 }
