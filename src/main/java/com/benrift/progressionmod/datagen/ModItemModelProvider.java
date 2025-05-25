@@ -15,5 +15,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         basicItem(ModItems.DEPTHS_PORTAL_IGNITER.get());
         basicItem(ModItems.YUNSHUL_WISH.get());
+        basicItem(ModItems.BOUNDER_SCALES.get());
+        basicItem(ModItems.BOUNDER_CLAW.get());
     }
 }

@@ -1,0 +1,24 @@
+{
+  "type": "progression:depthsdim_type",
+  "generator": {
+    "type": "minecraft:noise",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "progression:depths_biome",
+          "parameters": {
+            "continentalness": 0.6,
+            "depth": 0.6,
+            "erosion": 0.2,
+            "humidity": 0.4,
+            "offset": 0.0,
+            "temperature": 0.4,
+            "weirdness": 0.0
+          }
+        }
+      ]
+    },
+    "settings": "minecraft:amplified"
+  }
+}

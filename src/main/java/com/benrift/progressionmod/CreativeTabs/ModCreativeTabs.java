@@ -22,6 +22,8 @@ public class ModCreativeTabs {
                             output.accept(ModItems.TORTURE_DEVICE.get());
                             output.accept(ModItems.DEPTHS_PORTAL_IGNITER.get());
                             output.accept(ModItems.YUNSHUL_WISH.get());
+                            output.accept(ModItems.BOUNDER_CLAW.get());
+                            output.accept(ModItems.BOUNDER_SCALES.get());
                         })
                         .build()
         );

@@ -35,8 +35,17 @@ public class ModItems {
     public static final Supplier<Item> YUNSHUL_WISH = ITEMS.register("yunshul_wish",
             () -> new YunshulWish(new Item.Properties()
                     .stacksTo(1)  // Only one item per stack
-                    .rarity(Rarity.EPIC)  // Purple/Epic rarity color
-            ));
+                    .rarity(Rarity.EPIC)));
+
+    public static final Supplier<Item> BOUNDER_CLAW = ITEMS.register("bounder_claw",
+            () -> new Item(new Item.Properties()
+                    .stacksTo(64)  // Only one item per stack
+                    .rarity(Rarity.EPIC)));
+
+    public static final Supplier<Item> BOUNDER_SCALES = ITEMS.register("bounder_scales",
+            () -> new Item(new Item.Properties()
+                    .stacksTo(64)  // Only one item per stack
+                    .rarity(Rarity.EPIC)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
