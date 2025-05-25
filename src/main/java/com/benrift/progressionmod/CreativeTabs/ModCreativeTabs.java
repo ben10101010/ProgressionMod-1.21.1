@@ -24,6 +24,8 @@ public class ModCreativeTabs {
                             output.accept(ModItems.YUNSHUL_WISH.get());
                             output.accept(ModItems.BOUNDER_CLAW.get());
                             output.accept(ModItems.BOUNDER_SCALES.get());
+                            output.accept(ModItems.SOUL_DUST.get());
+                            output.accept(ModItems.RESONANCE_FRAGMENTS.get());
                         })
                         .build()
         );

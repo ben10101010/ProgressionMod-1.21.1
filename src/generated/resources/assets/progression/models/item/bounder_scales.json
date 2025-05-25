@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "progression:item/yunshul_wish"
+    "layer0": "progression:item/bounder_scales"
   }
 }

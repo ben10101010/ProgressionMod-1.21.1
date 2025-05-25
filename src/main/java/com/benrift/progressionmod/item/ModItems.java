@@ -5,6 +5,7 @@ import com.benrift.progressionmod.item.CustomItems.FruitOfConsequences;
 import com.benrift.progressionmod.item.CustomItems.TortureDevice;
 import com.benrift.progressionmod.item.CustomItems.DepthsPortalIgniter;  // <-- Add this import
 import com.benrift.progressionmod.item.CustomItems.YunshulWish;
+import com.benrift.progressionmod.item.CustomItems.SoulDust;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
@@ -43,6 +44,16 @@ public class ModItems {
                     .rarity(Rarity.EPIC)));
 
     public static final Supplier<Item> BOUNDER_SCALES = ITEMS.register("bounder_scales",
+            () -> new Item(new Item.Properties()
+                    .stacksTo(64)  // Only one item per stack
+                    .rarity(Rarity.EPIC)));
+
+    public static final Supplier<Item> SOUL_DUST = ITEMS.register("soul_dust",
+            () -> new Item(new Item.Properties()
+                    .stacksTo(12)  // Only one item per stack
+                    .rarity(Rarity.EPIC)));
+
+    public static final Supplier<Item> RESONANCE_FRAGMENTS = ITEMS.register("resonance_fragments",
             () -> new Item(new Item.Properties()
                     .stacksTo(64)  // Only one item per stack
                     .rarity(Rarity.EPIC)));
